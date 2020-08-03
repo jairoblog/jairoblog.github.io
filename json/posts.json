@@ -1,11 +1,28 @@
-[
+[	
 	{
-		'id' : 9
+		'id' : 2,
 		'titulo':
-			'Titulo',
-		'descripcion':
-			'Esta es una descripcion del post.',
+			'Tu Mejor Desicion',
+		'contenido':
+			'<p><strong>T&uacute; te preguntar&aacute;s cu&aacute;l ser&aacute; tu mejor decisi&oacute;n que has tomado o que tomaras, ya que a cada momento tomamos decisiones ya sean relevantes o irrelevantes, y la verdad no seria mal si tu te pones a pensar en eso, pero no se tu pero yo aveces pienso mucho en algunas decisiones que tomo y al final mi respuesta a esa decisi&oacute;n es muy sencilla y en cada momento tenemos decisiones que nos est&aacute;n esperando adelante para ver que podemos hacer con ellas y muchas veces nos sentimos confundidos de tomar decisiones o a veces ni las queremos tomar pero nuestra obligaci&oacute;n es de enfrentarlas. Y te quiero hablar de una decisi&oacute;n que cambio mi vida completamente la cual no todas las decisiones que tomas cambian tu vida, si afectan pero no cambian tu camino y esa decisi&oacute;n fue la de seguir a Jes&uacute;s, para vos puede ser una decisi&oacute;n normal como las otras o incluso no te puede ni importar, pero te quiero decir algo que si tu tomas esa decisi&oacute;n de darle tu vida a Jes&uacute;s no solo tomaras esa decisi&oacute;n y ya, &iexcl;no! esa desicion que tomes te llevara a muchas cosas que vos no te imaginas y seras alguien que en cada momento que tome decisiones tu final sera feliz, solo es que tomes la mejor decisi&oacute;n de entregarle tu vida a Jes&uacute;s y veras que esa decisi&oacute;n fue la mejor de tu vida.</strong></p>',
 		'fecha':
-			'2020-07-19',
-	},
+			'2019-05-12',
+		'imagen':
+			'2.jpg',
+	}, 
+
+	{
+		'id' : 1,
+		'titulo':
+			'Tu Mejor Amigo',
+		'contenido':
+			'<p>&iexcl;&iexcl;Hey!! si, tu que estas leyendo esto, permitime hablarte de alguien que es mas que un amigo, pueda ser que tengas ya amigos o no, pero te quiero hablarte de alguien especial que no es como una amistad normal que en alg&uacute;n momento puede terminar &iexcl;no! esa amistad que el te ofrece nunca se termina, tu crees que se termina como cualquier otra amistad pero el nunca te deja, para el tu sigues siendo su amigo. Ac&eacute;ptalo como tu amigo y veras que el nunca se ira aunque tu lo dejes en momentos dif&iacute;ciles el siempre permanecer&aacute;.<strong> &iexcl;&iexcl;Jes&uacute;s es tu mejor amigo!!</strong></p>
+<p><em><strong>Ya no os llamo siervos, por que el siervo no sabe lo que hace su se&ntilde;or, pero os he llamado amigos, porque os he dado a conocer todo lo que o&iacute;do de mi padre. Juan 15:15</strong></em></p>',
+		'fecha':
+			'2019-04-12',
+		'imagen':
+			'1.jpg',
+	}, 
+	
+	
 ]
