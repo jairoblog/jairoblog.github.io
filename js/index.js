@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    var postsPerPage = 10;
+    $("#posts-per-page").html(postsPerPage);
     var page = getUrlParameter('page');
     if (page == null){
         page = 1;
@@ -11,12 +13,27 @@ $( document ).ready(function() {
             $("#posts").html("No se ha podido cargar las publicaciones");
         },
         success: function(data) {
-            var postsHtml ="";
-            for(i=0; i<data.length; i++){
+            var postsHtml = "";
+            //Inicio paginacion
+            var postsLength = data.length;
+            var pages = Math.ceil(postsLength/postsPerPage);
+            var pagesHtml = "";
+            for(i=0; i<pages; i++){
+                pagesHtml += getPageHtml(i,page);
+            }
+            $("#pages").html(pagesHtml);
+            //Fin paginacion
+            //Inicio posts
+            var last = postsPerPage*page;
+            var first = last-postsPerPage;
+            if (last > data.length){
+                last = data.length;
+            }
+            for(i=first; i<last; i++){
                 postsHtml += getPostHtml(data[i]);
             }
             $("#posts").html(postsHtml);
-            
+            //FIn posts
         }
      });
 });
@@ -36,6 +53,15 @@ function getPostHtml(post) {
               <p><a href="post.html?id=${post.id}">Leer más...</a></p>
           </div>
       </div>`;
+}
+
+function getPageHtml(n,page){
+    if (n+1 == page){
+        return `<li class="page-item active"><a class="page-link" href="?page=${n+1}">${n+1}</a></li>`;
+    }else{
+        return `<li class="page-item"><a class="page-link" href="?page=${n+1}">${n+1}</a></li>`;
+    }
+    
 }
 
 function getSpaceAheadOf(str, n){
