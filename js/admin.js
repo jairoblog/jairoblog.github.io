@@ -21,10 +21,10 @@ $("form#form-publicacion").on("submit", function (e) {
   e.preventDefault();
   var id = $("#id").val();
   var titulo = $("#titulo").val();
-  var contenido = editor.getData().replace(/"/gm,"'");
+  var contenido = editor.getData().replace(/"/gm,"'").replace(/<a href/gm,"<a target='_blank' href").replace(/(\r\n|\n|\r)/gm,"");
   var fecha = $("#fecha").val();
   var imagen = $("#imagen").val();
-  var json = `{\n\t"id":"${id}",\n \t"titulo":"${titulo}",\n \t"contenido":"${contenido.replace(/(\r\n|\n|\r)/gm,"")}",\n \t"fecha":"${fecha}",\n \t"imagen":"${imagen}"\n},`;
+  var json = `{\n\t"id":"${id}",\n \t"titulo":"${titulo}",\n \t"contenido":"${contenido}",\n \t"fecha":"${fecha}",\n \t"imagen":"${imagen}"\n},`;
   $("#publicacion").val(json);
 });
 
