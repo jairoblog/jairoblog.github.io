@@ -20,10 +20,8 @@ $(document).ready(function () {
         $("#post-titulo").html("Error");
         $("#post-contenido").html("Publicación no encontrada");
       } else {
-        $("#post-img").css(
-          "background-image",
-          `url(img/posts/${publicacion.imagen})`
-        );
+        $("title").html(publicacion.titulo + " | Jairo Blog")
+        $("#post-img").css("background-image",`url(img/posts/${publicacion.imagen})`);
         $("#post-titulo").html(publicacion.titulo);
         $("#post-fecha").html(dateToString(publicacion.fecha));
         $("#post-contenido").html(publicacion.contenido);

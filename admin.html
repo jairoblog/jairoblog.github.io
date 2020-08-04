@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Jairo Blog</title>
+	<title>Admin | Jairo Blog</title>
 
 	<!-- Estilos y fuentes del template  -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,38 +48,69 @@
 		</div>
 	</nav>
 
-    <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Acerca de</h1>
-              <span class="subheading">Biografía</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+	<!-- Cabecera -->
+	<header class="masthead" style="background-image: url('img/admin-bg.jpg')">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="site-heading">
+						<h1>Generador de publicaciones</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-    <!-- Contenido Principal -->
-    <div class="container">
-      <div class="row">   
-        <div class="col-lg-3 col-md-4 offset-lg-1">
-          <img class="img-fluid avatar" src="img/avatar.jpg" alt="">
-        </div>
-        <div class="col-lg-7 col-md-8">
-          <h2 class="section-heading">Juan Pérez</h2>   
-          <p>Nacido en... lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit...</p>
-        </div>
-      </div>  
-    </div>
+	<!-- Contenido Principal -->
+	<div class="container">
+		<form id="form-publicacion">
+			<div class="form-group">
+				<label for="id">ID</label>
+				<input type="number" class="form-control" id="id" placeholder="ID" required>
+			</div>
+			<div class="form-group">
+				<label for="titulo">Título</label>
+				<input type="text" class="form-control" id="titulo" placeholder="Título" required>
+			</div>
+			<div class="form-group">
+				<label for="contenido">Contenido</label>
+				<textarea class="form-control" id="contenido" rows="10" placeholder="Contenido" required></textarea>
+			</div>
+			<div class="form-group">
+				<label for="fecha">Fecha</label>
+				<input type="date" class="form-control" id="fecha" placeholder="Fecha" required>
+			</div>
+			<div class="form-group">
+				<label for="imagen">Nombre de la imagen</label>
+				<input type="text" class="form-control" id="imagen" placeholder="Nombre de la imagen" required>
+			</div>
+			<div class="row">
+				<div class="col my-2">
+					<button type="submit" class="btn btn-dark btn-block">Generar publicación</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
-    <hr>
+	<hr>
 
-    <!-- Pié de página -->
+	<!-- Contenido Principal -->
+	<div class="container">
+		<div class="form-group">
+			<label for="publicacion">Publicación</label>
+			<textarea class="form-control" id="publicacion" rows="10" placeholder="Publicación" readonly></textarea>
+		</div>
+		<div class="row">
+			<div class="col my-2">
+				<button type="button" class="btn btn-dark btn-block" id="copy">Copiar</button>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- Pié de página -->
 	<footer>
 		<hr>
 		<div class="container">
@@ -111,7 +142,7 @@
 							</a>
 						</li>
 						<li class="list-inline-item">
-							<a href="https://api.whatsapp.com/send?phone=50499339395">
+							<a href="https://www.facebook.com/jairo.orellana.566">
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -125,13 +156,14 @@
 		</div>
 	</footer>
 
-    <!-- jQuert y Bootstrap -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- jQuert y Bootstrap -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Scripts del template -->
-    <script src="js/clean-blog.min.js"></script>
+	<!-- Scripts del template -->
+	<script src="js/clean-blog.min.js"></script>
+	<script src="js/admin.js"></script>
 
-  </body>
+</body>
 
 </html>
