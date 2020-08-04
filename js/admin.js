@@ -21,7 +21,7 @@ $("form#form-publicacion").on("submit", function (e) {
   e.preventDefault();
   var id = $("#id").val();
   var titulo = $("#titulo").val();
-  var contenido = $("#contenido").val();
+  var contenido = editor.getData();
   var fecha = $("#fecha").val();
   var imagen = $("#imagen").val();
   var json = `{\n\t"id":"${id}",\n \t"titulo":"${titulo}",\n \t"contenido":"${contenido.replace(

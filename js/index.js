@@ -10,6 +10,7 @@ $( document ).ready(function() {
         dataType:'json',
         type: 'GET',  
         error: function(xhr, statusText, err) {
+            console.log(err);
             $("#posts").html("No se ha podido cargar las publicaciones");
         },
         success: function(data) {
