@@ -38,3 +38,14 @@ $("#copy").click(function () {
   document.execCommand("copy");
   alert("Publicación copiada al portapapeles, pegala donde la necesites.");
 });
+
+ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
