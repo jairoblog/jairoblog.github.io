@@ -2,7 +2,7 @@ $(document).ready(function () {
   var today = new Date(Date.now());
   $("#fecha").val(
     `${today.getFullYear()}-${
-      today.getMonth() < 10 ? "0" + today.getMonth() : today.getMonth()
+      (today.getMonth()+1) < 10 ? "0" + (today.getMonth()+1) : (today.getMonth()+1)
     }-${today.getDate() < 10 ? "0" + today.getDate() : today.getDate()}`
   );
   $.ajax({
@@ -21,7 +21,7 @@ $("form#form-publicacion").on("submit", function (e) {
   e.preventDefault();
   var id = $("#id").val();
   var titulo = $("#titulo").val();
-  var contenido = editor.getData().replace(/(")/gm,"'");
+  var contenido = editor.getData().replace(/"/gm,"'");
   var fecha = $("#fecha").val();
   var imagen = $("#imagen").val();
   var json = `{\n\t"id":"${id}",\n \t"titulo":"${titulo}",\n \t"contenido":"${contenido.replace(/(\r\n|\n|\r)/gm,"")}",\n \t"fecha":"${fecha}",\n \t"imagen":"${imagen}"\n},`;

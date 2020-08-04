@@ -17,44 +17,44 @@ function dateToString(fecha){
     var dt = new Date(fecha);
     var mes;
     switch (dt.getMonth()) {
-        case 1:
+        case 0:
             mes ="enero";
             break;
-        case 2:
+        case 1:
             mes ="febrero";
             break;
-        case 3:
+        case 2:
             mes ="marzo";
             break;
-        case 4:
+        case 3:
             mes ="abril";
             break;
-        case 5:
+        case 4:
             mes ="mayo";
             break;
-        case 6:
+        case 5:
             mes ="junio";
             break;
-        case 7:
+        case 6:
             mes ="julio";
             break;
-        case 8:
+        case 7:
             mes ="agosto";
             break;
-        case 9:
+        case 8:
             mes ="septiembre";
             break;
-        case 10:
+        case 9:
             mes ="octubre";
             break;
-        case 11:
+        case 10:
             mes ="noviembre";
             break;
-        case 12:
+        case 11:
             mes ="diciembre";
             break;
     }
-    return `${dt.getDate()} de ${mes} del ${dt.getFullYear()}`;
+    return `${dt.getDate()+1} de ${mes} del ${dt.getFullYear()}`;
 }
 
 function stripHtml(html){
