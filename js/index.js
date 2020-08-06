@@ -36,7 +36,7 @@ $( document ).ready(function() {
             $("#posts").html(postsHtml);
             //FIn posts
         }
-     });
+    });
 });
 
 function getPostHtml(post) {
