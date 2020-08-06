@@ -34,6 +34,8 @@
     rel='stylesheet' type='text/css'>
   <link href="css/clean-blog.min.css" rel="stylesheet">
 
+  <script src="js/bg.js"></script>
+
 </head>
 
 <body>
@@ -100,6 +102,19 @@
       </div>
     </div>
   </div>
+
+  <hr />
+
+	<!-- Versiculo del dia -->
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<script src="https://www.biblegateway.com/votd/get/?format=json&version=NTV&callback=BG.votdWriteCallback"></script>
+				<p id="daily-verse"></p>
+				<a id="daily-link"></a>
+			</div>
+		</div>
+	</div>
 
   <!-- Pié de página -->
 	<footer>

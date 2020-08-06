@@ -34,6 +34,8 @@
 		rel='stylesheet' type='text/css'>
 	<link href="css/clean-blog.min.css" rel="stylesheet">
 
+	<script src="js/bg.js"></script>
+
 </head>
 
 <body>
@@ -78,7 +80,7 @@
 		</div>
 	</header>
 
-	<!-- Contenido Principal -->
+	<!-- Formulario publicación -->
 	<div class="container">
 		<form id="form-publicacion">
 			<div class="form-group">
@@ -113,7 +115,7 @@
 
 	<hr>
 
-	<!-- Contenido Principal -->
+	<!-- Publicación generada -->
 	<div class="container">
 		<div class="form-group">
 			<label for="publicacion">Publicación</label>
@@ -122,6 +124,19 @@
 		<div class="row">
 			<div class="col my-2">
 				<button type="button" class="btn btn-dark btn-block" id="copy">Copiar</button>
+			</div>
+		</div>
+	</div>
+
+	<hr />
+
+	<!-- Versiculo del dia -->
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<script src="https://www.biblegateway.com/votd/get/?format=json&version=NTV&callback=BG.votdWriteCallback"></script>
+				<p id="daily-verse"></p>
+				<a id="daily-link"></a>
 			</div>
 		</div>
 	</div>
