@@ -51,7 +51,7 @@ function getPostHtml(post) {
               <h2 class="section-heading title">${post.titulo}</h2>
               <p>${dateToString(post.fecha)}</p>
               <p>${contenidoTxt.substring(0,space)}...</p>
-              <p><a href="post.html?id=${post.id}">Leer más...</a></p>
+              <p><a href="post?id=${post.id}">Leer más...</a></p>
           </div>
       </div>`;
 }
