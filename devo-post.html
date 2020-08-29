@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Acerca de | Jairo Blog</title>
+  <title>Jairo Blog</title>
 
   <link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
@@ -59,7 +59,7 @@
 						<a class="nav-link" href="devo">Devocional</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Acerca de</a>
+						<a class="nav-link" href="about">Acerca de</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="contact">Contacto</a>
@@ -70,13 +70,18 @@
   </nav>
 
   <!-- Cabecera -->
-  <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+  <header class="masthead" id="post-img">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Acerca de</h1>
+            <h1 id="post-titulo">
+              <div class="spinner-grow text-dark" role="status" id="load-titulo">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </h1>
+            <span class="subheading" id="post-fecha"></span>
           </div>
         </div>
       </div>
@@ -86,22 +91,11 @@
   <!-- Contenido Principal -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-4 offset-lg-1">
-        <img class="img-fluid avatar" src="img/avatar.jpg" alt="">
-      </div>
-      <div class="col-lg-7 col-md-8">
-        <h2 class="section-heading">Jairo Orellana</h2>
-        <p>Hola! ¿cómo estás? Soy Jairo Orellana, tengo 20 años, soy hijo de pastores y es una bendición. También mi mayor bendición fue
-          conocer a Jesús a la edad de 14 años, me congrego en una iglesia local y es una bendición servirle, también
-          Dios me ha dado un talento de poder ejecutar la guitarra gracias a él, entre mis hobbies favoritos están leer y
-          escribir y también me gusta el ambiente de familia. </p>
-        <p>En este blog estaré compartiendo temas acerca de: Tu identidad en tu familia, que es tu
-          familia para Jesús, como fortalecer el vínculo en tu familia, entre otros. Estaré dejando reflexiones y
-          consejos que estoy seguro te ayudarán en tu vida diaria.
-          Gracias por ser parte de esta comunidad y espero podamos crecer en Jesús, recuerda que la imagen del reino de
-          Dios aquí en la tierra, ES TU FAMILIA.
-        </p>
-        <p>Dios te bendiga</p>
+      <div class="col" id="post-contenido">
+        <div class="d-flex justify-content-center">
+          Cargando...
+          <div class="spinner-border" role="status"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -165,12 +159,12 @@
 		</div>
 	</footer>
 
-  <!-- jQuert y Bootstrap -->
+  <!-- Bootstrap y Javascripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Scripts del template -->
   <script src="js/clean-blog.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/devo-post.js"></script>
 
 </body>
 

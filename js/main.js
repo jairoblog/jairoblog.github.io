@@ -61,3 +61,36 @@ function stripHtml(html){
     var text = html.replace(/<[^>]*>?/gm, '');
     return text;
 }
+
+function getPostHtml(post, postType) {
+    var contenidoTxt = stripHtml(post.contenido);
+    var space = getSpaceAheadOf(contenidoTxt,250);
+    return `
+      <div class="row project">
+          <div class="col-lg-3 col-md-4 offset-lg-1">
+              <img class="img-fluid" src="img/${postType}/${post.imagen}" alt="">
+          </div>
+          <div class="col-lg-7 col-md-8">
+              <h2 class="section-heading title">${post.titulo}</h2>
+              <p>${dateToString(post.fecha)}</p>
+              <p>${contenidoTxt.substring(0,space)}...</p>
+              <p><a href="${postType}-post?id=${post.id}">Leer más...</a></p>
+          </div>
+      </div>`;
+  }
+  
+  function getPageHtml(n,page){
+    if (n+1 == page){
+        return `<li class="page-item active"><a class="page-link" href="?page=${n+1}">${n+1}</a></li>`;
+    }else{
+        return `<li class="page-item"><a class="page-link" href="?page=${n+1}">${n+1}</a></li>`;
+    }
+    
+  }
+  
+  function getSpaceAheadOf(str, n){
+    while(str[n] != " " || n == str.length){
+        n++;
+    }
+    return n;
+  }

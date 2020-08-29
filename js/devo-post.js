@@ -4,7 +4,7 @@ $(document).ready(function () {
     window.location.replace("https://jairoblog.github.io");
   }
   $.ajax({
-    url: "https://jairoblog.github.io/json/posts.json",
+    url: "https://jairoblog.github.io/json/devo.json",
     dataType: "json",
     type: "GET",
     error: function (xhr, statusText, err) {
@@ -22,7 +22,7 @@ $(document).ready(function () {
         errorCase(1);
       } else {
         $("title").html(publicacion.titulo + " | Jairo Blog")
-        $("#post-img").css("background-image",`url(img/posts/${publicacion.imagen})`);
+        $("#post-img").css("background-image",`url(img/devo/${publicacion.imagen})`);
         $("#post-titulo").html(publicacion.titulo);
         $("#post-fecha").html(dateToString(publicacion.fecha));
         $("#post-contenido").html(publicacion.contenido);
