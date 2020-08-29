@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  loadLastBlog();
+  loadLastDevo();
+});
+
+function loadLastDevo(){
   $.ajax({
     url: "https://jairoblog.github.io/json/devo.json",
     dataType: "json",
@@ -12,7 +17,9 @@ $(document).ready(function () {
       $("#devo").html(postHtml);
     },
   });
-  console.log("inicio");
+}
+
+function loadLastBlog(){
   $.ajax({
     url: "https://jairoblog.github.io/json/blog.json",
     dataType: "json",
@@ -26,8 +33,7 @@ $(document).ready(function () {
       $("#blog").html(postHtml);
     },
   });
-  console.log("fin");
-});
+}
 
 
 
