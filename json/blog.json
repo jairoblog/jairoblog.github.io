@@ -1,11 +1,10 @@
-	[ 	
-		{
-			"id":1,
- 			"titulo":"¡Bienvenidos!",
- 			"contenido":"<p>¡Hola! Espero te encuentres bien. En este segmento tendrás la oportunidad de tener en tus manos historias bíblicas para que en casa con tu familia puedan tener un buen momento y hacer de Dios su hogar. ¡Espero que sea de bendición!&nbsp;</p><p>¡Dios te bendiga!</p><p><i>Que Dios sea tu hogar.</i></p>",
- 			"fecha":"2020-10-19",
- 			"imagen":"1.jpg"
-		},
+[ 	
 	
-	
-	]
+	{
+		"id":1,
+		"titulo":"¡Bienvenidos!",
+		"contenido":"<p>¡Hola! Espero te encuentres bien. En este segmento tendrás la oportunidad de tener en tus manos historias bíblicas para que en casa con tu familia puedan tener un buen momento y hacer de Dios su hogar. ¡Espero que sea de bendición!&nbsp;</p><p>¡Dios te bendiga!</p><p><i>Que Dios sea tu hogar.</i></p>",
+		"fecha":"2020-10-19",
+		"imagen":"1.jpg"
+	},
+]
